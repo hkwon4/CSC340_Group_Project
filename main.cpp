@@ -21,8 +21,9 @@ double parseStringToDouble(std::string number){
             number.erase(number.begin() + i);
         }
     }
+
     n = std::stod(number);
-    std::cout << number << std::endl;
+    std::cout << n << std::endl;
     
     /** algorithm explained:
      * take the string
@@ -35,7 +36,8 @@ double parseStringToDouble(std::string number){
 }
 
 //function to extract csv data from columns and create Degree object
-NS_SCHOOLDATA::Degree createDegreeObj(std::stringstream s){
+
+NS_SCHOOLDATA::Degree createDegreeObj(std::stringstream& s){
     std::string column; //string to hold column value
     std::getline(s, column, ',');
     std::string major =  column;
@@ -81,16 +83,35 @@ int main(){
     
     string line, temp; //used to hold row in csv file
  
-
     getline(degreeFS, line); //read column headers
 
-    while (degreeFS >> temp){ //loop to go through each row
-        getline(degreeFS, line);
+    while (getline(degreeFS, line)){ //loop to go through each row
         stringstream ss; //used to contain row
-        ss.clear();
-        ss.str(line);
-        Degree d = createDegreeObj(ss); //creation of degree object that holds csv data
-        degreeList.push_back(d);
+        //Degree d = createDegreeObj(ss); //creation of degree object that holds csv data
+
+        string column; //string to hold column value
+        getline(ss, column, ',');
+        cout << column << endl;
+        string major =  column;
+        getline(ss, column, ',');
+        //double start = parseStringToDouble(column);
+        getline(ss, column, ',');
+        //double med = parseStringToDouble(column);
+        getline(ss, column, ',');
+        //double percent = parseStringToDouble(column);
+        getline(ss, column, ',');
+        //double m10 = parseStringToDouble(column);
+        getline(ss, column, ',');
+        //double m25 = parseStringToDouble(column);
+        getline(ss, column, ',');
+        //double m75 = parseStringToDouble(column);
+        getline(ss, column, ',');
+        //double m90 = parseStringToDouble(column);
+
+        cout << major <<endl;
+        //NS_SCHOOLDATA::Degree d(major, start, med, percent, m10, m25, m75, m90);
+
+        //degreeList.push_back(d);
     }
 
     degreeFS.close();

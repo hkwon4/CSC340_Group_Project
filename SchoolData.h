@@ -63,7 +63,7 @@ private:
     double mid25;  // in dollars
     double mid75;  // in dollars
     double mid90;  // in dollars
-}
+};
 /*
 * for SchoolRegion class:
  * 
@@ -112,6 +112,6 @@ private:
     double mid25;
     double mid75;
     double mid90;
-}
+};
 }
 #endif
