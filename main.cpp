@@ -34,7 +34,9 @@ double parseStringToDouble(std::string number){
      */
     return n;
 }
+std::string formatFile(string fileName){
 
+}
 //function to extract csv data from columns and create Degree object
 
 NS_SCHOOLDATA::Degree createDegreeObj(std::stringstream& s){
