@@ -8,6 +8,7 @@
 //  implementations and definitions of functions declared in SchoolData.h
 //
 //created by: Hyok In Kwon
+//date created: 4/18/2022
 
 #include "SchoolData.h"
 #include <string>
@@ -30,7 +31,7 @@ namespace NS_SCHOOLDATA{
     Degree::Degree(string m,  double Start,  double Med,  double percent,  double m10,  double m25,  double m75,  double m90){
         major = m;
         mStart = mStart;
-        mMed = mMed;
+        mMed = Med;
         percentChange = percent;
         mid10 = m10;
         mid25 = m25;
