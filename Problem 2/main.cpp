@@ -1,4 +1,4 @@
-
+//Created by Dexter and Antonio
 //function to get the average
 double getAverage(int count, double total) {
     double avg = 0;
